@@ -1,0 +1,43 @@
+/* comentário
+
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+
+#tipoh1{
+    color: red;
+     text-align: right;
+}
+
+.tipoVermelho{
+    color:red;
+    text-align: right;
+    font-family: tahoma;
+    font-size: 22px;
+}
+
+*/
+.margem {
+  margin-top: 10px;
+}
+
+/*
+.container {
+     width: 900px;
+     background-color: white;
+     margin: -20px auto 10px auto;
+     box-shadow: 0px 0px 10px black;
+     padding: 10px 10px 10px 10px;
+}
+*/
+
