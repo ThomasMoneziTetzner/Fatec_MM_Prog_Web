@@ -1,0 +1,8 @@
+<session-config>
+    <tracking-mode>COOKIE</tracking-mode>
+</session-config>
+
+<!-- o container Servlet envia um cookie em
+resposta à primeira solicitação do cliente.
+Este cookie contém informações da sessão (JSESSIONID) -->
+
