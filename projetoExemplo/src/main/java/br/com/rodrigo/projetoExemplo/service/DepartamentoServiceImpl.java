@@ -8,16 +8,13 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-// indicando que essa classe vai ser gerenciada pelo container do Spring
-// classe que representa fluxo de negócio da aplicação
+
 @Service
 public class DepartamentoServiceImpl implements DepartamentoService {
 
-    //informa ao Spring que ele deve injetar a variável anotada
     @Autowired
     private DepartamentoDao dao;
 
-    //readOnly, vai informar ao Spring que a transação não é apenas de leitura, ou seja, ela deve ser usada tanto em métodos de consulta como de escrita
     @Transactional(readOnly = false)
     @Override
     public void salvar(Departamento departamento) {
@@ -51,7 +48,7 @@ public class DepartamentoServiceImpl implements DepartamentoService {
     }
 
     @Override
-    public boolean depertamentoTemCargos(Long id) {
+    public boolean departamentoTemCargos(Long id) {
         if (buscarPorId(id).getCargos().isEmpty()) {
             return false;
         }

@@ -4,6 +4,7 @@ import br.com.rodrigo.projetoExemplo.domain.Departamento;
 
 import java.util.List;
 
+
 public interface DepartamentoService {
 
     void salvar(Departamento departamento);
@@ -16,6 +17,6 @@ public interface DepartamentoService {
 
     List<Departamento> buscarTodos();
 
-    boolean depertamentoTemCargos(Long id);
+    boolean departamentoTemCargos(Long id);
 }
 

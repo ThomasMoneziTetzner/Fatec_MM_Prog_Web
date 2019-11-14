@@ -4,6 +4,7 @@ import br.com.rodrigo.projetoExemplo.domain.Cargo;
 
 import java.util.List;
 
+
 public interface CargoService {
 
     void salvar(Cargo cargo);
@@ -15,5 +16,6 @@ public interface CargoService {
     Cargo buscarPorId(Long id);
 
     List<Cargo> buscarTodos();
-}
 
+    boolean cargoTemFuncionarios(Long id);
+}

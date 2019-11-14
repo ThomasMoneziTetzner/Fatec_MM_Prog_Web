@@ -10,28 +10,27 @@ import java.util.List;
 
 // indicando que essa classe vai ser gerenciada pelo container do Spring
 // classe que representa fluxo de negócio da aplicação
-@Service
-//readOnly, vai informar ao Spring que a transação não é apenas de leitura, ou seja, ela deve
-// ser usada tanto em métodos de consulta como de escrita
-@Transactional(readOnly = false)
+@Service @Transactional(readOnly = false)
 public class CargoServiceImpl implements CargoService {
-    //informa ao Spring que ele deve injetar a variável anotada
+
     @Autowired
     private CargoDao dao;
+
     @Override
     public void salvar(Cargo cargo) {
         dao.save(cargo);
     }
+
     @Override
     public void editar(Cargo cargo) {
         dao.update(cargo);
     }
+
     @Override
     public void excluir(Long id) {
         dao.delete(id);
     }
-    //informa ao Spring que a transação é apenas de leitura, ou seja, ela deve ser
-    // usada só em métodos de consulta
+
     @Override @Transactional(readOnly = true)
     public Cargo buscarPorId(Long id) {
 
@@ -42,6 +41,14 @@ public class CargoServiceImpl implements CargoService {
     public List<Cargo> buscarTodos() {
 
         return dao.findAll();
+    }
+
+    @Override
+    public boolean cargoTemFuncionarios(Long id) {
+        if (buscarPorId(id).getFuncionarios().isEmpty()) {
+            return false;
+        }
+        return true;
     }
 }
 
