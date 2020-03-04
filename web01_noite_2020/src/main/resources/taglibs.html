@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Programação Web">
+    <meta name="author" content="Rodrigo">
+    <meta name="viewport" content="width=1210, user-scalable=yes">
+    <meta name="keywords" content="java,sql,mysql,web">
+    <title>Aula web 01 - Programação Web</title>
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+
+</head>
+<body>
+<div class="container"> <!-- container -->
+
+    <div> <!-- cabeçalho -->
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">PRINCIPAL</a>
+            <a class="navbar-brand" href="banco.html">BANCO DE DADOS E JDBC</a>
+            <a class="navbar-brand" href="java.html">O QUE É O JAVA EE</a>
+            <a class="navbar-brand" href="servlets.html">SERVLETS</a>
+            <a class="navbar-brand" href="jsp.html">JAVA SERVER PAGES</a>
+            <a class="navbar-brand" href="taglibs.html">TAGLIBS</a>
+        </nav>
+    </div>
+    <div> <!-- conteúdo -->
+        <h1 class="jumbotron text-center">Cadastro de Alunos</h1>
+        <form action="cadastro.jsp" method="post">
+            <div class="form-group">
+                <label for="nome">Nome do Aluno:</label>
+                <input class="form-control" type="text" maxlength="40" size="60"
+                    id="nome" name="txtNome">
+            </div>
+            <div class="form-group">
+                <label for="usuario">Nome de Usuário:</label>
+                <input class="form-control" type="text" maxlength="15" size="25"
+                   id="usuario" name="txtUsuario"
+                placeholder="exemplo de usuario: rodrimartins">
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input class="form-control" type="password" maxlength="8"
+                 size="10" id="senha" name="txtSenha">
+            </div>
+            <div class="form-group">
+                <label for="endereco">Endereço:</label>
+                <input class="form-control" type="text" name="txtEndereco"
+                       id="endereco" size="40" maxlength="40">
+            </div>
+            <div class="form-group">
+                <label for="bairro">Bairro:</label>
+                <input class="form-control" type="text" name="txtBairro" id="bairro"
+                size="20" maxlength="20">
+            </div>
+            <div class="form-group">
+                <label for="cidade">Cidade:</label>
+                <input class="form-control" type="text" name="txtCidade" id="cidade"
+                size="20" maxlength="20">
+            </div>
+            <div class="form-group">
+                <label for="estado">Estado:</label>
+                <select class="form-control" name="txtEstado" id="estado">
+                    <option value="sp">SP</option>
+                    <option value="mg">MG</option>
+                    <option value="rj">RJ</option>
+                    <option value="es">ES</option>
+                    <option value="pa">PA</option>
+                    <option value="pi">PI</option>
+                    <option value="ce">CE</option>
+                    <option value="ro">RO</option>
+                    <option value="am">AM</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input class="form-control" type="tel" name="txtTelefone"
+                       id="telefone" size="15" maxlength="15"
+                       placeholder="(DDD)99999-9999">
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input class="form-control" type="email" name="txtEmail" id="email"
+                placeholder="seuemail@seuemail.com.br" size="60"
+                       aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">
+                Nunca vamos compartilhar seu email, com ninguém.</small>
+            </div>
+            <div class="form-group">
+                <label for="lattes">Lattes:</label>
+                <input class="form-control" type="url" name="txtLattes" id="lattes"
+                size="60">
+            </div>
+            <div class="form-group">
+                <label for="dataNasc">Data de Nascimento:</label>
+                <input class="form-control" type="date" name="txtDataNasc" id="dataNasc"
+                min="2020-01-01" max="2020-12-31" value="2020-02-18">
+            </div>
+            <div class="form-group">
+                <label for="foto">Foto:</label>
+                <input class="form-control-file" type="file" name="txtFoto" id="foto">
+            </div>
+            <fieldset>
+                <legend>Estado Civil:</legend>
+            <div class="form-checked">
+                <input class="form-checked-input" type="radio" name="txtEstCivil" id="casado"
+                value="Casado">Casado(a)
+            </div>
+            <div class="form-checked">
+                <input class="form-checked-input" type="radio" name="txtEstCivil" id="solteiro"
+                   value="Solteiro">Solteiro(a)
+            </div>
+            <div class="form-checked">
+            <input class="form-checked-input" type="radio" name="txtEstCivil" id="divorciado"
+                   value="Divorciado">Divorciado(a)
+            </div>
+            <div class="form-checked">
+                <input class="form-checked-input" type="radio" name="txtEstCivil" id="viuvo"
+                   value="Viuvo">Viúvo(a)
+            </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Séries Favoritas:</legend>
+                <div class="form-checked">
+                    <input class="form-checked-input" type="checkbox" name="txtSeries" id="got"
+                    value="got">Games of Thrones
+                </div>
+                <div class="form-checked">
+                    <input class="form-checked-input" type="checkbox" name="txtSeries" id="suits"
+                       value="suits">Suits
+                </div>
+                <div class="form-checked">
+                <input class="form-checked-input" type="checkbox" name="txtSeries" id="lacasa"
+                       value="lacasa">La casa de Papel
+                </div>
+                <div class="form-checked">
+                    <input class="form-checked-input" type="checkbox" name="txtSeries" id="anne"
+                       value="anne">Anne with E
+                </div>
+            </fieldset>
+            </p>
+            <p class="text-center">
+                <input class="btn btn-outline-primary" type="submit" name="txtEnviar"
+                value="Enviar">
+                <input class="btn btn-outline-secondary" type="reset" name="txtLimpar"
+                       value="Limpar">
+            </p>
+
+        </form>
+
+    </div>
+    <div> <!-- rodapé -->
+        <footer>
+            <p class="jumbotron text-center font-weigth-bold">
+                Copyright © 2017 Faculdade de
+                Tecnologia de Mogi Mirim -
+                Arthur de Azevedo - Telefones:
+                (19)3806-2181 e 3806-3139
+                https://www.fatecmm.edu.br/
+            </p>
+        </footer>
+
+    </div>
+</div>
+</body>
+</html>

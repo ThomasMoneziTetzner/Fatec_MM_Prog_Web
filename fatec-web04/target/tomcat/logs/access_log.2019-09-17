@@ -1,7 +1,0 @@
-0:0:0:0:0:0:0:1 - - [17/Sep/2019:19:34:52 -0300] "GET /web04 HTTP/1.1" 302 - http-bio-8082-exec-1 0
-0:0:0:0:0:0:0:1 - - [17/Sep/2019:19:34:55 -0300] "GET /web04/listaJogadores.jsp HTTP/1.1" 200 1037 http-bio-8082-exec-2 995
-0:0:0:0:0:0:0:1 - - [17/Sep/2019:19:35:06 -0300] "GET /web04/exemplo_el.jsp HTTP/1.1" 200 668 http-bio-8082-exec-3 20
-0:0:0:0:0:0:0:1 - - [17/Sep/2019:19:36:08 -0300] "GET /web04 HTTP/1.1" 302 - http-bio-8082-exec-1 0
-0:0:0:0:0:0:0:1 - - [17/Sep/2019:19:36:11 -0300] "GET /web04/listaJogadores.jsp HTTP/1.1" 200 1037 http-bio-8082-exec-2 573
-0:0:0:0:0:0:0:1 - - [17/Sep/2019:19:36:16 -0300] "GET /web04/exemplo_el.jsp HTTP/1.1" 200 668 http-bio-8082-exec-3 12
-0:0:0:0:0:0:0:1 - - [17/Sep/2019:19:36:20 -0300] "GET /web04/mostra_imc.jsp?peso=99&altura=1.75 HTTP/1.1" 200 273 http-bio-8082-exec-4 849
